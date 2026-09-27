@@ -3,34 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <!-- -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | NFT preview card component</title>
 </head>
 <body>
-  <main>
-    <article>
-      <div>
-        <img src="" alt="">
+  <article class="card">
+    <div>
+      <img src="" alt="" class="card__img">
+    </div>
+
+    <h1 class="card__title">Equilibrium #3429</h1>
+    <p class="card__text">Our Equilibrium collection promotes balance and calm.</p>
+
+    <div class="u-flex u-align-center u-space-between">
+      <div class="u-flex u-align-start u-gap-xs">
+        <div><img src="images/icon-ethereum.svg" alt=""></div>
+        <p>0.041 ETH</p>
       </div>
 
-      <h1>Equilibrium #3429</h1>
-      <p>Our Equilibrium collection promotes balance and calm.</p>
-      
-      <div>
-        <div>
-          <p>0.041 ETH</p>
-        </div>
-
-        <div>
-          <p>3 days left</p>
-        </div>
+      <div class="u-flex u-align-start u-gap-xs">
+        <div><img src="images/icon-clock.svg" alt=""></div>
+        <p>3 days left</p>
       </div>
-      
-      <div>
-        <img src="" alt="">
-        <h2>Creation of Jules Wyvern</h2>
-      </div>
-    </article>
-  </main>
+    </div>
+    <div class="line"></div>
+    <div>
+      <h2 class="card__subtitle">Creation of <span class="card__creator">Jules Wyvern</span></h2>
+    </div>
+  </article>
 </body>
 </html>
