@@ -8,5 +8,8 @@ Utilizando os desafios para melhorar minhas habilidades e acompanhar minha evolu
 
 ### Newbie
 
-[ntf preview card component](https://kahsr.github.io/frontend-mentor-challenges/newbie/nft-preview-card-component-main/) / [código](newbie/nft-preview-card-component-main)
-<img src="newbie/nft-preview-card-component-main/preview.jpg" width="500">
+[ntf preview card component - live demo](https://kahsr.github.io/frontend-mentor-challenges/newbie/nft-preview-card-component-main/) / [código](newbie/nft-preview-card-component-main)
+
+<div>
+  <img src="newbie/nft-preview-card-component-main/preview.jpg" width="500">
+</div>
