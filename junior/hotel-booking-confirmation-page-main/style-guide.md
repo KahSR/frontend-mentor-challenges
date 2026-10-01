@@ -15,7 +15,7 @@ The designs were created to the following widths:
 
 - Neutral 900: hsl(33, 15%, 15%)
 - Neutral 800: hsl(33, 22%, 20%)
-- Neutral 700: hsl(32, 20%, 29%)
+- Neutral 700: hsl(33, 22%, 20%)
 - Neutral 600: hsl(33, 17%, 41%)
 - Neutral 400: hsl(36, 22%, 86%)
 - Neutral 200: hsl(30, 24%, 93%)

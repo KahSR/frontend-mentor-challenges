@@ -3,43 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz@0,9..144;1,9..144&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Hotel booking confirmation page</title>
 </head>
 <body>
   <div class="grid">
-    <header></header>
+    <header class="header">
+      <div class="header__content">
+        <img src="assets/images/logo.svg" alt="" class="header__logo">
 
-    <main>
-      <section>
-        <p>Booking · Confirmed</p>
-        <h1>Bienvenue, Lucia.</h1>
+        <button class="btn-menu"><img src="assets/images/icon-menu.svg" alt=""></button>
+      </div>
 
-        <div>
-          <button>Print receipt</button>
-          <button>Add to calendar</button>
+      <nav class="navigation header__navigation">
+        <ul class="navigation__menu">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link navigation__link--featured">
+              <div class="navigation__box-text">
+                <img src="assets/images/icon-bed.svg" alt="" class="navigation__icon">
+                <span class="navigation__text">Your stay</span>
+              </div>
+
+              <div class="navigation__noti">1</div>
+            </a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">
+              <img src="assets/images/icon-house.svg" alt="" class="navigation__icon">
+              <span class="navigation__text">The house</span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">
+              <img src="assets/images/icon-pin.svg" alt="" class="navigation__icon">
+              <span class="navigation__text">Around town</span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">
+              <img src="assets/images/icon-breakfast-outline.svg" alt="" class="navigation__icon">
+              <span class="navigation__text">Breakfast</span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">
+              <img src="assets/images/icon-mail.svg" alt="" class="navigation__icon">
+              <span class="navigation__text">Messages</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="intro container__intro">
+        <div class="container__intro-content">
+          <p class="intro__text u-text-uppercase">Booking · Confirmed</p>
+          <h1 class="intro__title">Bienvenue, <span class="intro__title--details">Lucia.</span></h1>
+        </div>
+
+        <div class="intro__buttons container__buttons">
+          <button class="intro__btn container__btn">Print receipt</button>
+          <button class="intro__btn intro__btn--bg container__btn">Add to calendar</button>
         </div>
       </section>
 
-      <section>
-        <article>
-          <p>WELCOME CARD</p>
-          <div><img src="assets/images/icon-sun.svg" alt=""></div>
-          <h2>A note from your host, Margaux.</h2>
-          <p>We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you.</p>
+      <section class="booking container__booking">
+        <article class="booking__card card-welcome">
 
-          <p>ROOM</p>
-          <p>La Garrigue</p>
+          <p class="u-text-uppercase u-txt-size-xs">WELCOME CARD</p>
+          <div class="card-welcome__box"><img src="assets/images/icon-sun.svg" alt=""></div>
+          <h2 class="card-welcome__subtitle">A note from your host, <span class="card-welcome__subtitle-details">Margaux.</span></h2>
+          <p class="card-welcome__text">We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you.</p>
+
+          <p class="u-text-uppercase u-txt-size-xs">ROOM</p>
+          <p class="card-welcome__text-name">La Garrigue</p>
+        </article>
+
+        <article class="booking__card card-receipt">
+          <div class="card-receipt__header ">
+            <div class="card-receipt__heading">
+              <p class="card-receipt__label u-text-uppercase u-txt-size-xs">receipt</p>
+              <h2 class="card-receipt__title">Your stay</h2>
+            </div>
+            <div class="card-receipt__reference">
+              <p class="card-receipt__reference-number u-txt-size-xs">№ MS-2026</p>
+              <p class="card-receipt__reference-code u-txt-size-xs">0421-AH</p>
+            </div>
+          </div>
+
+          <div class="line--dashed"></div>
+
+          <div class="card-receipt__stay">
+            <div class="card-receipt__stay-period card-receipt__stay-period--check-in">
+              <p class="card-receipt__label">check in</p>
+              <p class="card-receipt__date">25 <span class="card-receipt__date--normal">Apr</span></p>
+              <p class="card-receipt__time u-txt-size-xs">Saturday · 15:00</p>
+            </div>
+            <div class="card-receipt__stay-period card-receipt__stay-period--check-out">
+              <p class="card-receipt__label">check out</p>
+              <p class="card-receipt__date">29 <span class="card-receipt__date--normal">Apr</span></p>
+              <p class="card-receipt__time u-txt-size-xs">Wednesday · 11:00</p>
+            </div>
+          </div>
+
+          <div class="line--dashed"></div>
+
+          <ul class="card-receipt__items">
+            <li class="card-receipt__item card-receipt__item--color">
+              <div class="card-receipt__item-description">Room·La Garrigue 4nights</div>
+              <div class="card-receipt__item-amount">€ 620.00</div>
+            </li>
+            <li class="card-receipt__item card-receipt__item--color">
+              <div class="card-receipt__item-description">Breakfast · 2 guests</div>
+              <div class="card-receipt__item-amount">€ 96.00</div>
+            </li>
+            <li class="card-receipt__item">
+              <div class="card-receipt__item-description">Tourist tax</div>
+              <div class="card-receipt__item-amount">€ 14.40</div>
+            </li>
+          </ul>
+
+          <div class="line"></div>
+
+          <div class="card-receipt__total">
+            <div class="card-receipt__summary">
+              <p class="card-receipt__label">total paid</p>
+              <p class="card-receipt__total-amount">€ 730.40</p>
+            </div>
+            
+            <div class="card-receipt__payment">
+              <p class="card-receipt__payment-method">Paid · Wise · GBP</p>
+              <img class="card-receipt__barcode" src="assets/images/icon-barcode.svg" alt="">
+            </div>
+          </div>
         </article>
       </section>
 
-      <div>
-        <article>
-          <div></div>
-          <h2>Check-in from 15:00</h2>
-          <p>Sat, 25 April</p>
-          <p>Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree</p>
+      <p class="u-text-uppercase tip-text container__tip-text"><img src="assets/images/icon-sparkle.svg" alt=""> Hover To Fan <img src="assets/images/icon-sparkle.svg" alt=""></p>
+
+      <div class="container__group-cards">
+        <article class="card-info container__card-info">
+          <div class="card-info__header">
+            <div class="card-info__category">
+              <div class="card-info__details-img card-info__details-img--arrival"><img src="assets/images/icon-key.svg" alt="" class="card-info__icon"></div>
+              <p class="card-info__category-name card-info__category-name--arrival u-text-uppercase">Arrival</p>
+            </div>
+
+            <p class="card-info__number card-info__number--arrival">01</p>
+          </div>
+
+          <h2 class="card-info__title">Check-in from 15:00</h2>
+          <p class="card-info__meta">Sat, 25 April</p>
+          <p class="card-info__description">Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.</p>
+        </article>
+
+        <article class="card-info container__card-info">
+          <div class="card-info__header">
+            <div class="card-info__category">
+              <div class="card-info__details-img card-info__details-img--wifi"><img src="assets/images/icon-wifi.svg" alt="" class="card-info__icon"></div>
+              <p class="card-info__category-name u-text-uppercase card-info__category-name--wifi">wifi</p>
+            </div>
+
+            <p class="card-info__number card-info__number--wifi">02</p>
+          </div>
+
+          <h2 class="card-info__title">Le Soleil · Guest</h2>
+          <p class="card-info__meta">Password below</p>
+          
+          <div class="card-info__connection">
+            <div class="card-info__credential">
+              <p class="u-text-uppercase card-info__label">network</p>
+              <p class="card-info__value">Le Soleil · Guest</p>
+            </div>
+
+            <div class="card-info__credential">
+              <p class="u-text-uppercase card-info__label">Password</p>
+
+              <div class="card-info__copy">
+                <p class="card-info__labe card-info__value">soleil-2026</p>
+                <button class="card-info__button u-text-uppercase">copy</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-info container__card-info">
+          <div class="card-info__header">
+            <div class="card-info__category">
+              <div class="card-info__details-img card-info__details-img--breakfast"><img src="assets/images/icon-breakfast.svg" alt="" class="card-info__icon"></div>
+              <p class="card-info__category-name u-text-uppercase card-info__category-name--breakfast">Breakfast</p>
+            </div>
+
+            <p class="card-info__number card-info__number--breakfast">03</p>
+          </div>
+
+          <h2 class="card-info__title">Served 8 - 10:30</h2>
+          <p class="card-info__meta">On the terrace</p>
+          <p class="card-info__description">Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before.</p>
         </article>
       </div>
     </main>
