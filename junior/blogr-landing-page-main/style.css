@@ -1,0 +1,138 @@
+:root{
+  --font-family-ubuntu: "Ubuntu", sans-serif;
+  --font-family-overpass: "Overpass", sans-serif;
+
+  --font-Weight-overpass-300: 300;
+  --font-Weight-overpass-600:600;
+
+  --font-weight-ubuntu-400: 400;
+  --font-weight-ubuntu-500: 500;
+  --font-weight-ubuntu-700: 700;
+
+  --font-size-base: 1.6rem;
+  --font-size-texts: 1.7rem;
+
+  --color-subtitle: hsl(208, 49%, 24%);
+  --color-highlight-title:hsl(0, 100%, 100%);
+  --color-texts: hsl(207, 13%, 34%);
+
+  --padding-space-main: 10px;
+}
+
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+img{
+  display: block;
+}
+button{
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+}
+h2{
+  color: var(--color-subtitle);
+}
+h1, h2{
+  font-family: var(--font-family-overpass);
+  font-weight: var(--font-Weight-overpass-600);
+}
+p{
+  color: var(--color-texts);
+  font-size: var(--font-size-texts);
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-overpass);
+  font-weight: var(--font-Weight-overpass-300);
+}
+
+/*  LAYOUT */
+
+.header__nav{
+  margin-bottom: 60px;
+}
+.header__about{
+  text-align: center;
+}
+
+/* ----- */
+.header{
+  background:
+    url("images/bg-pattern-intro-mobile.svg"),
+    linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-repeat: no-repeat;
+  background-size:320%;
+  background-position-x: 34%;
+  background-position-y: 35%;
+
+  padding: 20px var(--padding-space-main) 120px;
+  border-bottom-left-radius: 80px;
+  position: relative;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__btn-hamburguer{
+  border-top: 2px solid white;
+  width: 25px;
+}
+.nav__btn-hamburguer::before, .nav__btn-hamburguer::after{
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  display: block;
+  position:relative;
+  margin-top: 5px;
+}
+
+.about__title{
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+}
+.about__text{
+  margin-bottom: 40px;
+}
+.about__buttons{
+  font-family: var(--font-family-ubuntu);
+  font-weight:var(--font-weight-ubuntu-500);
+
+  border-radius: 20px;
+  border: 1px solid transparent;
+  padding: 12px 10px;
+}
+.about__buttons:first-child{
+  margin-right: 10px;
+}
+.about__button-start{
+  background-color: white;
+  color: hsl(353, 100%, 62%);
+}
+.about__button-learn{
+  border-color: white;
+  color:white;
+}
+
+.logo-link{
+  display: block;
+  text-decoration: none;
+}
+.logo{
+  width: 65px;
+}
+.featured-title{
+  color:var(--color-highlight-title);
+  font-family: var(--font-family-overpass);
+}
+.featured-text{
+  color: white;
+}
