@@ -18,49 +18,69 @@
       <div class="header__content">
         <img src="assets/images/logo.svg" alt="" class="header__logo">
 
-        <button class="btn-menu"><img src="assets/images/icon-menu.svg" alt=""></button>
+        <button class="btn-menu js-btn-menu">
+          <div class="btn-menu__border"></div>
+        </button>
       </div>
 
-      <nav class="navigation header__navigation">
-        <ul class="navigation__menu">
-          <li class="navigation__item">
-            <a href="#" class="navigation__link navigation__link--featured">
-              <div class="navigation__box-text">
-                <img src="assets/images/icon-bed.svg" alt="" class="navigation__icon">
-                <span class="navigation__text">Your stay</span>
-              </div>
+      <div class="container-navigation js-container-navigation">
+        <nav class="navigation header__navigation">
+          <ul class="navigation__menu">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link navigation__link--featured">
+                <div class="navigation__box-text">
+                  <img src="assets/images/icon-bed.svg" alt="" class="navigation__icon">
+                  <span class="navigation__text">Your stay</span>
+                </div>
 
-              <div class="navigation__noti">1</div>
-            </a>
-          </li>
+                <div class="navigation__noti">1</div>
+              </a>
+            </li>
 
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">
-              <img src="assets/images/icon-house.svg" alt="" class="navigation__icon">
-              <span class="navigation__text">The house</span>
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">
-              <img src="assets/images/icon-pin.svg" alt="" class="navigation__icon">
-              <span class="navigation__text">Around town</span>
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">
-              <img src="assets/images/icon-breakfast-outline.svg" alt="" class="navigation__icon">
-              <span class="navigation__text">Breakfast</span>
-            </a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link">
-              <img src="assets/images/icon-mail.svg" alt="" class="navigation__icon">
-              <span class="navigation__text">Messages</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <img src="assets/images/icon-house.svg" alt="" class="navigation__icon">
+                <span class="navigation__text">The house</span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <img src="assets/images/icon-pin.svg" alt="" class="navigation__icon">
+                <span class="navigation__text">Around town</span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <img src="assets/images/icon-breakfast-outline.svg" alt="" class="navigation__icon">
+                <span class="navigation__text">Breakfast</span>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                <img src="assets/images/icon-mail.svg" alt="" class="navigation__icon">
+                <span class="navigation__text">Messages</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="container-navigation__info-local">
+          <div class="container-navigation__weather card-weather">
+            <p class="u-text-uppercase card-weather__text">Today in cassis</p>
+            <p class="card-weather__number">27°</p>
+            <p class="card-weather__text-weather">Sunny · light breeze</p>
+          </div>
+
+          <div class="address">
+            <p class="u-text-uppercase address__text">Est. 1987</p>
+            <address class=" u-text-uppercase address__text-address address__text">Maison Soleil · 12 Rue des Oliviers · Cassis</address>
+            <p class="address__name u-text-uppercase address__text">© 2026 Maison Soleil</p>
+          </div>
+        </div>
+      </div>
     </header>
+
+    <div class="menu-overflow"></div>
 
     <main class="container">
       <section class="intro container__intro">
@@ -86,6 +106,8 @@
           <p class="u-text-uppercase u-txt-size-xs">ROOM</p>
           <p class="card-welcome__text-name">La Garrigue</p>
         </article>
+
+        <div class="booking__box-sun"><img src="assets/images/illustration-sun.svg" alt="" class="booking__sun"></div>
 
         <article class="booking__card card-receipt">
           <div class="card-receipt__header ">
@@ -212,5 +234,7 @@
       </div>
     </main>
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
