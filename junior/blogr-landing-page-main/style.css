@@ -10,13 +10,16 @@
   --font-weight-ubuntu-700: 700;
 
   --font-size-base: 1.6rem;
-  --font-size-texts: 1.7rem;
+  --font-size-featured-title:3.2rem;
 
   --color-subtitle: hsl(208, 49%, 24%);
   --color-highlight-title:hsl(0, 100%, 100%);
   --color-texts: hsl(207, 13%, 34%);
 
-  --padding-space-main: 10px;
+  --color-menu-link:  hsl(237, 23%, 31%);
+
+  --padding-container: 1.2rem;
+  --margin-articles: 3rem;
 }
 
 *{
@@ -32,16 +35,27 @@ button{
   border:none;
   cursor: pointer;
 }
-h2{
+picture{
+  display: block;
+}
+ul{
+  list-style: none;
+}
+h2, h3{
   color: var(--color-subtitle);
 }
-h1, h2{
+
+h1, h2, h3{
   font-family: var(--font-family-overpass);
   font-weight: var(--font-Weight-overpass-600);
 }
+
 p{
   color: var(--color-texts);
   font-size: var(--font-size-texts);
+}
+img{
+  max-width: 100%;
 }
 html{
   font-size: 62.5%;
@@ -53,15 +67,34 @@ body{
 }
 
 /*  LAYOUT */
-
+.header{
+  padding: 20px var(--padding-container) 120px;
+}
 .header__nav{
   margin-bottom: 60px;
 }
 .header__about{
   text-align: center;
 }
+.main{
+  padding: 60px 0px;
+  margin-bottom: 40px;
+}
+.s-designed{
+  margin-bottom: 250px;
+}
+.container{
+  padding: 0px var(--padding-container);
 
+}
+.article + .article{
+  margin-top: var(--margin-articles);
+}
+.footer{
+  padding: 50px var(--padding-container) 40px;
+}
 /* ----- */
+
 .header{
   background:
     url("images/bg-pattern-intro-mobile.svg"),
@@ -71,7 +104,7 @@ body{
   background-position-x: 34%;
   background-position-y: 35%;
 
-  padding: 20px var(--padding-space-main) 120px;
+
   border-bottom-left-radius: 80px;
   position: relative;
 }
@@ -80,6 +113,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
 }
 .nav__btn-hamburguer{
   border-top: 2px solid white;
@@ -94,6 +129,74 @@ body{
   position:relative;
   margin-top: 5px;
 }
+.menu{
+  background-color: white;
+  border-radius: 4px;
+
+  width: 100%;
+  padding: 20px;
+
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 60px;
+}
+.menu.active{
+  display: block;
+}
+.menu__group-link{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu__btn-drop{
+  color:  hsl(208, 49%, 24%);
+  font-weight: var(--font-Weight-overpass-600);
+  font-size: 1.4rem;
+  padding: 10px 5px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  
+}
+
+.menu__drop{
+  text-align: center;
+  background-color: hsl(207, 13%, 90%);
+  border-radius: 5px;
+  display: none;
+}
+.menu__drop-link{
+  color: hsl(207, 13%, 34%);
+  font-weight: var(--font-Weight-overpass-600);
+  color: hsl(207, 13%, 34%);
+  text-decoration: none;
+  padding: 10px 5px;
+  display: block;
+}
+.menu__item:hover .menu__drop{
+  display: block;
+}
+.menu__link-btn{
+  text-decoration: none;
+  display: block;
+  color: var(--color-menu-link);
+  font-weight: var(--font-Weight-overpass-600);
+  font-size: 1.4rem;
+  text-align: center;
+  width: 120px;
+  margin: auto;
+  padding: 10px 5px;
+  border-radius: 20px;
+}
+.menu__link-btn--sign{
+  background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  color: white;
+}
+
 
 .about__title{
   font-size: 3.2rem;
@@ -104,7 +207,7 @@ body{
 }
 .about__buttons{
   font-family: var(--font-family-ubuntu);
-  font-weight:var(--font-weight-ubuntu-500);
+  font-weight:var(--font-weight-ubuntu-700);
 
   border-radius: 20px;
   border: 1px solid transparent;
@@ -122,6 +225,102 @@ body{
   color:white;
 }
 
+.state{
+  text-align: center;
+  padding: 150px var(--padding-container) 100px;
+  margin-bottom: 40px;
+
+  position: relative;
+  z-index: 1;
+}
+.state::before{
+  content: "";
+  width: 300px;
+  height: 320px;
+  background: url("images/illustration-phones.svg")no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  top: -36%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.state__box-bg{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  background: hsl(237, 17%, 21%);
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  overflow: hidden;
+}
+.state__img{
+  transform: translateY(-150px) scale(1.6);
+}
+.state__subtitle{
+  margin-bottom: 30px;
+  font-size: 3.2rem;
+}
+
+.footer{
+  background-color: hsl(237, 17%, 21%);
+  border-top-right-radius: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  font-family: var(--font-family-ubuntu);
+  font-weight: var(--font-weight-ubuntu-400);
+
+  text-align: center;
+}
+.footer__logo{
+  max-width: 80px;
+  margin-bottom: 2rem;
+}
+.footer__item + .footer__item{
+  margin-top: 5px;
+}
+.footer__list-title{
+  color: hsl(0, 100%, 100%);
+  font-weight: var(--font-weight-ubuntu-500);
+  margin-bottom: 25px;
+}
+.footer__link{
+  color: hsl(0, 0%, 50%);
+  text-decoration: none;
+  display: block;
+  padding: 4px;
+}
+
+/* bloco reutilizável */
+.section__subtitle{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section__img{ 
+  margin:0px auto 30px;
+  max-width: 500px;
+  width: 100%;
+}
+.article{
+  text-align: center;
+}
+.article__subtitle{
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.article__text{
+  line-height: 2.4rem;
+}
+/* ----- */
+
 .logo-link{
   display: block;
   text-decoration: none;
@@ -132,6 +331,7 @@ body{
 .featured-title{
   color:var(--color-highlight-title);
   font-family: var(--font-family-overpass);
+  font-size: var(--font-size-featured-title);
 }
 .featured-text{
   color: white;
